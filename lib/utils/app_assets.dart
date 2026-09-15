@@ -18,4 +18,9 @@ class AppAssets {
   static const String suraRightDecoration =
       "assets/images/img_right_corner.png";
   static const String suraLeftDecoration = "assets/images/img_left_corner.png";
+  static const String aya = "assets/images/aya.png";
+  static const String sebha = "assets/images/sebha.png";
+  static const String sebhaHead = "assets/images/sebha_head.png";
+  static const String sebhaBody = "assets/images/sebha_body.png";
+
 }
