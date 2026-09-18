@@ -18,4 +18,15 @@ class AppAssets {
   static const String suraRightDecoration =
       "assets/images/img_right_corner.png";
   static const String suraLeftDecoration = "assets/images/img_left_corner.png";
+  static const String sound = "assets/images/sound.png";
+  static const String mute = "assets/images/mute.png";
+  static const String pause = "assets/images/pause.png";
+  static const String resume = "assets/images/continue.png";
+  static const String bottomDecoration2 = "assets/images/bottom_decoration2.png";
+  static const String prayBg = "assets/images/prayBg.png";
+  static const String prayTime = "assets/images/pray_time (2).png";
+  static const String morningAzkar = "assets/images/morning_azkar.png";
+  static const String eveningAzkar = "assets/images/evening_azkar.png";
+
+
 }
