@@ -7,7 +7,6 @@ import 'package:islami_app/tabs/time_tab/time_tab.dart';
 import 'package:islami_app/utils/app_assets.dart';
 import 'package:islami_app/utils/app_colors.dart';
 import 'package:islami_app/utils/app_theme.dart';
-
 import '../utils/size_utils.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -36,62 +35,62 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Stack(
-          children: [
-            Image.asset(
-              bgImg[selectedIndex],
-              width: double.infinity,
-              height: double.infinity,
-              fit: BoxFit.fill,
-            ),
-            Column(
+    return Scaffold(
+      body: Stack(
+        children: [
+          Image.asset(
+            bgImg[selectedIndex],
+            width: double.infinity,
+            height: double.infinity,
+            fit: BoxFit.fill,
+          ),
+          SafeArea(
+            child: Column(
               children: [
                 Image.asset(AppAssets.islamiLogo),
                 Expanded(child: tabsList[selectedIndex]),
               ],
             ),
-          ],
-        ),
+          ),
+        ],
+      ),
 
-        bottomNavigationBar: BottomNavigationBar(
-          backgroundColor:
-              AppTheme.darkMode.bottomNavigationBarTheme.backgroundColor,
-          currentIndex: selectedIndex,
-          onTap: (index) {
-            selectedIndex = index;
-            setState(() {});
-          },
-          type: BottomNavigationBarType.fixed,
-          items: [
-            builtBottomNavigationBarItem(
-              icon: AppAssets.quranIcon,
-              label: 'Quran',
-              index: 0,
-            ),
-            builtBottomNavigationBarItem(
-              icon: AppAssets.hadithIcon,
-              label: 'Hadith',
-              index: 1,
-            ),
-            builtBottomNavigationBarItem(
-              icon: AppAssets.sebhaIcon,
-              label: 'Sebha',
-              index: 2,
-            ),
-            builtBottomNavigationBarItem(
-              icon: AppAssets.radioIcon,
-              label: 'Radio',
-              index: 3,
-            ),
-            builtBottomNavigationBarItem(
-              icon: AppAssets.timeIcon,
-              label: 'Time',
-              index: 4,
-            ),
-          ],
-        ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor:
+            AppTheme.darkMode.bottomNavigationBarTheme.backgroundColor,
+        currentIndex: selectedIndex,
+        onTap: (index) {
+          selectedIndex = index;
+          setState(() {});
+        },
+        type: BottomNavigationBarType.fixed,
+        items: [
+          builtBottomNavigationBarItem(
+            icon: AppAssets.quranIcon,
+            label: 'Quran',
+            index: 0,
+          ),
+          builtBottomNavigationBarItem(
+            icon: AppAssets.hadithIcon,
+            label: 'Hadith',
+            index: 1,
+          ),
+          builtBottomNavigationBarItem(
+            icon: AppAssets.sebhaIcon,
+            label: 'Sebha',
+            index: 2,
+          ),
+          builtBottomNavigationBarItem(
+            icon: AppAssets.radioIcon,
+            label: 'Radio',
+            index: 3,
+          ),
+          builtBottomNavigationBarItem(
+            icon: AppAssets.timeIcon,
+            label: 'Time',
+            index: 4,
+          ),
+        ],
       ),
     );
   }
